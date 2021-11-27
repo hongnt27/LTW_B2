@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+        integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="custommer.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+        integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
+        crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+        integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
+        crossorigin="anonymous"></script>
+    <title>Coffee Custommer</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>The Coffee House</h3>
+            </div>
+            <ul class="list-unstyled components">
+                <li class="personal mb-4 ">
+                    <span><i class="fas fa-user-alt" style="font-size:30px"></i> Nguyễn Thị Hồng</span>
+                </li>
+                <li>
+                    <a href="#">Cá nhân</a>
+                </li>
+                <li>
+                    <a href="#">Trạng thái đơn hàng</a>
+                </li>
+                <li>
+                    <a href="#">Thống kê đơn hàng</a>
+                </li>
+                <li>
+                    <a href="#">Trò chuyện</a>
+                </li>
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false"
+                        class="dropdown-toggle">Cài đặt</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="#">Chung</a>
+                        </li>
+                        <li>
+                            <a href="#">Chính sách</a>
+                        </li>
+                        <li>
+                            <a href="#">Ngôn ngữ</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <button type="button" id="sidebarCollapse" class="btn btn-danger">
+                        <i class="fas fa-align-left"></i>
+                        <span>Danh sách khách hàng</span>
+                    </button>
+                     <div class="input-group btnSearch">
+                        <div class="input-group-prepend ">
+                            <span class="input-group-text" id="basic-addon1">Tìm kiếm</span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Nhập . . ." >
+                    </div>
+                    <button data-toggle="modal" data-target="#exampleModal"  class="btn btn-outline-danger" >Thêm khách hàng</button>
+
+
+                </div>
+            </nav>
+            <table class="table">
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Họ Tên</th>
+                        <th scope="col">Giới tính</th>
+                        <th scope="col">Ngày sinh</th>
+                        <th scope="col">Số điện thoại</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Thành viên</th>
+                        <th scope="col">Chi nhánh</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Nguyễn Thị Hồng</td>
+                        <td>Nữ</td>
+                        <td>27-08-2000</td>
+                        <td>0379824426</td>
+                        <td>hongnt.ptit@gmail.com</td>
+                        <td>Thành viên mới</td>
+                        <td>Hà Nội</td>
+                        <td>
+                            <button data-toggle="modal" data-target="#exampleModal"  class="btn btn-outline-secondary mr-2 btnFunc">Sửa</button>
+                            <button data-toggle="modal" data-target="#popupModal"  class="btn btn-outline-danger btnFunc" type="button" >Xóa</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Trần Thanh An</td>
+                        <td>Nữ</td>
+                        <td>27-08-2000</td>
+                        <td>0379824426</td>
+                        <td>hongnt.ptit@gmail.com</td>
+                        <td>Thành viên bạc</td>
+                        <td>TP Hồ Chí Minh</td>
+                        <td>
+                            <button data-toggle="modal" data-target="#exampleModal"  class="btn btn-outline-secondary mr-2 btnFunc">Sửa</button>
+                            <button data-toggle="modal" data-target="#popupModal"  class="btn btn-outline-danger btnFunc" type="button" >Xóa</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Trần Thanh An</td>
+                        <td>Nữ</td>
+                        <td>27-08-2000</td>
+                        <td>0379824426</td>
+                        <td>hongnt.ptit@gmail.com</td>
+                        <td>Thành viên bạc</td>
+                        <td>Đà Nẵng</td>
+                        <td>
+                            <button data-toggle="modal" data-target="#exampleModal"  class="btn btn-outline-secondary mr-2 btnFunc">Sửa</button>
+                            <button data-toggle="modal" data-target="#popupModal"  class="btn btn-outline-danger btnFunc" type="button" >Xóa</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Trần Thanh Tâm</td>
+                        <td>Nữ</td>
+                        <td>27-08-2000</td>
+                        <td>0379824426</td>
+                        <td>hongnt.ptit@gmail.com</td>
+                        <td>Thành viên vàng</td>
+                        <td>Cần Thơ</td>
+                        <td>
+                            <button data-toggle="modal" data-target="#exampleModal"  class="btn btn-outline-secondary mr-2 btnFunc">Sửa</button>
+                            <button data-toggle="modal" data-target="#popupModal"  class="btn btn-outline-danger btnFunc" type="button" >Xóa</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Trần Thanh Mai</td>
+                        <td>Nữ</td>
+                        <td>27-08-2000</td>
+                        <td>0379824426</td>
+                        <td>hongnt.ptit@gmail.com</td>
+                        <td>Thành viên bạc</td>
+                        <td>Cần Thơ</td>
+                        <td>
+                            <button data-toggle="modal" data-target="#exampleModal"  class="btn btn-outline-secondary mr-2 btnFunc">Sửa</button>
+                            <button data-toggle="modal" data-target="#popupModal"  class="btn btn-outline-danger btnFunc" type="button" >Xóa</button>
+                        </td>
+                    </tr>
+
+
+                </tbody>
+            </table>
+
+            <!-- pagination -->
+            <nav aria-label="...">
+                <ul class="pagination">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1">Trước</a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item "><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">Sau</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+    </div>
+
+    <!-- Model add -->
+
+    <div class="modal edit-modal fade" id="exampleModal" >
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Thêm khách hàng</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="txtEmpCode">Mã khách hàng</label>
+                                <input type="text" class="form-control" id="txtEmpCode">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="txtFullName">Họ tên</label>
+                                <input type="text" class="form-control" id="txtFullName">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="txtDob">Ngày sinh</label>
+                                <input type="date" class="form-control" id="txtDob">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="txtGender">Giới tính</label>
+                                <select id="txtGender" class="form-control">
+                                    <option value="1">Nam</option>
+                                    <option value="0">Nữ</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="txtEmail">Email</label>
+                                <input type="text" class="form-control" id="txtEmail">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="txtPhoneNumber">Số điện thoại</label>
+                                <input type="text" class="form-control" id="txtPhoneNumber">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="txtPosition">Thành viên</label>
+                                <select id="txtPosition" class="form-control">
+                                    <option value="1">Thành viên bạc</option>
+                                    <option value="2">Thành viên vàng</option>
+                                    <option value="3">Thành viên kim cương</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="txtDepart">Chi nhánh</label>
+                                <select id="txtDepart" class="form-control">
+                                    <option value="1">Hà Nội</option>
+                                    <option value="2">Hồ Chí Minh</option>
+                                    <option value="3">Đà Nẵng</option>
+                                    <option value="4">Cần Thơ</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer justify-content-xl-between">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+                    <!-- <button type="button" class="btn btn-danger" data-dismiss="modal">Xóa nhân viên</button> -->
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Lưu thay đổi</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <!-- delete modal -->
+     <div class="modal delete-modal fade" id="popupModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Xóa khách hàng</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Bạn có chắc chắn xóa ?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Đồng ý</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+        integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+        integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
